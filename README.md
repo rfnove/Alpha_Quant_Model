@@ -5,7 +5,7 @@
 ![MLOps](https://img.shields.io/badge/MLOps-MLflow-green)
 ![Deploy](https://img.shields.io/badge/Deploy-Streamlit-red)
 
-## 🎯 O Elevador Pitch (Resumo Executivo)
+## 🎯 O que é o Alpha Seeker?
 **Alpha Seeker** é um pipeline de ponta a ponta de *Machine Learning* e Engenharia de Dados focado no mercado financeiro brasileiro. O algoritmo prevê tendências direcionais de ações da B3 (horizonte de 6 meses) e gerencia o risco do portfólio de forma autônoma, alocando o capital em Renda Fixa (CDI) quando detecta assimetria de risco negativa. 
 
 ![Curva de Patrimônio](curva_patrimonio_vale3.png)
@@ -60,3 +60,31 @@ O algoritmo assumiu o controle do portfólio. O placar da rentabilidade real (Ma
 ```bash
 git clone [https://github.com/rfnove/Alpha_Seeker_Quant_Model.git](https://github.com/rfnove/Alpha_Seeker_Quant_Model.git)
 cd Alpha_Seeker_Quant_Model
+---
+
+
+
+```
+
+2. **Crie o ambiente virtual e instale as dependências:**
+
+```bash
+python -m venv .venv
+# Ative o .venv (Windows: .venv\Scripts\activate | Mac/Linux: source .venv/bin/activate)
+pip install -r requirements.txt
+
+```
+
+3. **Inicie o servidor do MLflow (Em um terminal separado):**
+
+```bash
+mlflow ui
+
+```
+
+4. **Rode a Aplicação Web (Streamlit):**
+
+```bash
+python -m streamlit run app.py
+
+```
