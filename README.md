@@ -60,3 +60,31 @@ O algoritmo assumiu o controle do portfólio. O placar da rentabilidade real (Ma
 ```bash
 git clone [https://github.com/rfnove/Alpha_Seeker_Quant_Model.git](https://github.com/rfnove/Alpha_Seeker_Quant_Model.git)
 cd Alpha_Seeker_Quant_Model
+---
+
+
+
+```
+
+2. **Crie o ambiente virtual e instale as dependências:**
+
+```bash
+python -m venv .venv
+# Ative o .venv (Windows: .venv\Scripts\activate | Mac/Linux: source .venv/bin/activate)
+pip install -r requirements.txt
+
+```
+
+3. **Inicie o servidor do MLflow (Em um terminal separado):**
+
+```bash
+mlflow ui
+
+```
+
+4. **Rode a Aplicação Web (Streamlit):**
+
+```bash
+python -m streamlit run app.py
+
+```
