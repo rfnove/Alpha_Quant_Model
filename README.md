@@ -5,7 +5,7 @@
 ![MLOps](https://img.shields.io/badge/MLOps-MLflow-green)
 ![Deploy](https://img.shields.io/badge/Deploy-Streamlit-red)
 
-## 🎯 O Elevador Pitch (Resumo Executivo)
+## 🎯 O que é o Alpha Seeker?
 **Alpha Seeker** é um pipeline de ponta a ponta de *Machine Learning* e Engenharia de Dados focado no mercado financeiro brasileiro. O algoritmo prevê tendências direcionais de ações da B3 (horizonte de 6 meses) e gerencia o risco do portfólio de forma autônoma, alocando o capital em Renda Fixa (CDI) quando detecta assimetria de risco negativa. 
 
 ![Curva de Patrimônio](curva_patrimonio_vale3.png)
