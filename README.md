@@ -1,11 +1,11 @@
-# 📈 Alpha Seeker: IA Quantitativa para Position Trading B3
+# Alpha Seeker: IA Quantitativa para Position Trading B3
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine_Learning-Random_Forest-orange)
 ![MLOps](https://img.shields.io/badge/MLOps-MLflow-green)
 ![Deploy](https://img.shields.io/badge/Deploy-Streamlit-red)
 
-## 🎯 O que é o Alpha Seeker?
+## O que é o Alpha Seeker?
 **Alpha Seeker** é um pipeline de ponta a ponta de *Machine Learning* e Engenharia de Dados focado no mercado financeiro brasileiro. O algoritmo prevê tendências direcionais de ações da B3 (horizonte de 6 meses) e gerencia o risco do portfólio de forma autônoma, alocando o capital em Renda Fixa (CDI) quando detecta assimetria de risco negativa. 
 
 ![Curva de Patrimônio](curva_patrimonio_vale3.png)
@@ -13,14 +13,14 @@
 
 ---
 
-## 💼 O Problema de Negócio
+## O Problema de Negócio
 No mercado financeiro, estratégias passivas como o *Buy & Hold* sofrem severamente em ciclos econômicos de alta taxa de juros e mercados em queda. O investidor não apenas perde capital na desvalorização da ação, mas também sofre o **Custo de Oportunidade** de não estar rendendo a taxa básica de juros (Selic). 
 
 O objetivo desta arquitetura de dados é responder a uma pergunta de negócios clara: *"A probabilidade de alta desta ação nos próximos 6 meses justifica o risco, ou o dinheiro estaria mais seguro rendendo o CDI diário?"*
 
 ---
 
-## 🛠️ Arquitetura e Stack Tecnológico
+## Arquitetura e Stack Tecnológico
 O projeto foi estruturado utilizando as melhores práticas de Engenharia de Dados e MLOps:
 
 1. **Extração e Micro-ETL Ao Vivo:** Consumo de APIs do *Yahoo Finance* (`yfinance`) para cotações globais e do *Banco Central do Brasil* (`python-bcb`) para a taxa Selic diária, lidando com fusos horários, feriados e valores nulos em tempo real.
@@ -31,7 +31,7 @@ O projeto foi estruturado utilizando as melhores práticas de Engenharia de Dado
 
 ---
 
-## 🧠 Diferenciais Técnicos da Engenharia (Showcase)
+## Diferenciais Técnicos da Engenharia (Showcase)
 
 * **Prevenção de *Data Leakage* (Vazamento de Dados):**
   * **Temporal (Embargo):** Implementação de um gap de 126 dias úteis no particionamento do dataset para garantir que o modelo jamais "visse" o futuro durante a fase de treino.
@@ -40,21 +40,21 @@ O projeto foi estruturado utilizando as melhores práticas de Engenharia de Dado
 
 ---
 
-## 🏆 Resultados Financeiros (Estudo de Caso: VALE3)
+## Resultados Financeiros (Estudo de Caso: VALE3)
 
 O modelo foi submetido a um teste de fogo na base *Out-of-Sample* (Dados invisíveis de 2023 a 2026) operando ações da Vale (VALE3.SA), um período marcado por forte desvalorização estrutural do ativo.
 
 O algoritmo assumiu o controle do portfólio. O placar da rentabilidade real (Marcação a Mercado Diária) foi:
 
-* 📉 Retorno do Mercado (*Buy & Hold* Cego): **-23.79%**
-* 🚀 Retorno do Robô Híbrido (Ação + CDI): **+5.22%**
-* 📊 **Alpha Gerado (Excesso de Retorno): +29.01%**
+*  Retorno do Mercado (*Buy & Hold* Cego): **-23.79%**
+*  Retorno do Robô Híbrido (Ação + CDI): **+5.22%**
+* **Alpha Gerado (Excesso de Retorno): +29.01%**
 
 **O Veredito:** O modelo entregou um *Alpha* estrondoso contra o mercado. Ele identificou o cenário de alto risco, esquivou-se das principais quedas protegendo o capital na Renda Fixa e garantiu que a carteira terminasse no positivo em um mercado que destruiu quase um quarto do patrimônio dos investidores passivos.
 
 ---
 
-## 🚀 Como Executar o Projeto Localmente
+## Como Executar o Projeto Localmente
 
 1. **Clone o repositório:**
 ```bash
